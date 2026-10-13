@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Aqil Rahman — Software Engineer, CTO & Founder</title>
+    <meta name="title" content="Aqil Rahman — Software Engineer, CTO & Founder">
+    <meta name="description" content="Aqil Rahman is an Informatics Engineer, Software Developer, CTO, Founder, and digital technology enthusiast with experience in software development, technology leadership, entrepreneurship, and digital innovation.">
+    <meta name="author" content="Aqil Rahman">
+    <meta name="keywords" content="Aqil Rahman, Software Engineer, CTO, Founder, Startup, ITB, Polban, Payakumbuh, Digital Innovation, Portfolio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aqilrahman.com/"> <!-- Ganti dengan URL domain asli Anda nantinya -->
+    
+    <!-- Favicon (Inline SVG for zero dependencies) -->
+    <link rel="icon" href="https://raw.githubusercontent.com/kojolah/aqil/refs/heads/main/Aqil-Rahman.PNG" type="image/svg+xml">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aqilrahman.com/">
+    <meta property="og:title" content="Aqil Rahman — Software Engineer, CTO & Founder">
+    <meta property="og:description" content="Aqil Rahman is an Informatics Engineer, Software Developer, CTO, Founder, and digital technology enthusiast with experience in software development, technology leadership, entrepreneurship, and digital innovation.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/kojolah/aqil/refs/heads/main/Aqil-Rahman.PNG">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aqilrahman.com/">
+    <meta property="twitter:title" content="Aqil Rahman — Software Engineer, CTO & Founder">
+    <meta property="twitter:description" content="Aqil Rahman is an Informatics Engineer, Software Developer, CTO, Founder, and digital technology enthusiast with experience in software development, technology leadership, entrepreneurship, and digital innovation.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/kojolah/aqil/refs/heads/main/Aqil-Rahman.PNG">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#151e2e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Premium Reveal Animation System */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal, .reveal * {
+                transition: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        /* Custom Premium Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8fafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Glassmorphism for Navbar */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden selection:bg-blue-100 selection:text-blue-900">
+
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6 bg-transparent">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tighter text-slate-900 group">
+                AQIL<span class="text-blue-600 transition-colors group-hover:text-slate-900">.</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#about" data-i18n="nav.about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About</a>
+                <a href="#experience" data-i18n="nav.experience" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Experience</a>
+                <a href="#technology" data-i18n="nav.technology" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Technology</a>
+                <a href="#achievements" data-i18n="nav.achievements" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Achievements</a>
+                <a href="#contact" data-i18n="nav.contact" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+                
+                <!-- Language Toggle -->
+                <div class="flex items-center bg-slate-100 rounded-full p-1 border border-slate-200">
+                    <button onclick="setLanguage('id')" id="btn-lang-id" class="px-3 py-1 text-xs font-semibold rounded-full transition-all bg-white shadow-sm text-slate-900">ID</button>
+                    <button onclick="setLanguage('en')" id="btn-lang-en" class="px-3 py-1 text-xs font-semibold rounded-full transition-all text-slate-500 hover:text-slate-900">EN</button>
+                </div>
+
+                <a href="#contact" data-i18n="nav.cta" class="px-5 py-2.5 text-sm font-medium bg-slate-900 text-white rounded-full hover:bg-blue-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                    Let's Connect
+                </a>
+            </nav>
+
+            <!-- Mobile Toggle & Lang -->
+            <div class="flex items-center gap-4 md:hidden">
+                <div class="flex items-center bg-slate-100 rounded-full p-0.5 border border-slate-200">
+                    <button onclick="setLanguage('id')" id="btn-lang-id-mob" class="px-2.5 py-1 text-xs font-semibold rounded-full transition-all bg-white shadow-sm text-slate-900">ID</button>
+                    <button onclick="setLanguage('en')" id="btn-lang-en-mob" class="px-2.5 py-1 text-xs font-semibold rounded-full transition-all text-slate-500">EN</button>
+                </div>
+                <button id="mobile-menu-btn" class="text-slate-900 focus:outline-none" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg origin-top transition-transform duration-300">
+            <div class="px-6 py-6 flex flex-col gap-5">
+                <a href="#about" data-i18n="nav.about" class="mobile-link text-base font-medium text-slate-600 hover:text-blue-600">About</a>
+                <a href="#experience" data-i18n="nav.experience" class="mobile-link text-base font-medium text-slate-600 hover:text-blue-600">Experience</a>
+                <a href="#technology" data-i18n="nav.technology" class="mobile-link text-base font-medium text-slate-600 hover:text-blue-600">Technology</a>
+                <a href="#achievements" data-i18n="nav.achievements" class="mobile-link text-base font-medium text-slate-600 hover:text-blue-600">Achievements</a>
+                <a href="#speaking" data-i18n="nav.speaking" class="mobile-link text-base font-medium text-slate-600 hover:text-blue-600">Speaking</a>
+                <a href="#leadership" data-i18n="nav.leadership" class="mobile-link text-base font-medium text-slate-600 hover:text-blue-600">Leadership</a>
+                <a href="#education" data-i18n="nav.education" class="mobile-link text-base font-medium text-slate-600 hover:text-blue-600">Education</a>
+                <a href="#contact" data-i18n="nav.cta" class="mobile-link text-base font-bold text-blue-600 mt-2">Let's Connect</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+            <!-- Subtle background elements -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-50/80 rounded-full blur-[100px] -z-10 opacity-80"></div>
+            
+            <div class="max-w-6xl mx-auto px-6 md:px-12">
+                <div class="flex flex-col-reverse md:flex-row items-center gap-16 md:gap-12">
+                    
+                    <div class="flex-1 text-center md:text-left">
+                        <div class="reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold tracking-wide text-slate-700 mb-6">
+                            <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                            <span data-i18n="hero.badge">TECHNOLOGY • INNOVATION • LEADERSHIP</span>
+                        </div>
+                        
+                        <h1 class="reveal delay-100 text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
+                            <span class="block text-slate-500 text-2xl md:text-3xl font-medium tracking-normal mb-2" data-i18n="hero.greeting">Hello, I'm</span>
+                            Aqil Rahman
+                            <span class="block text-lg md:text-2xl font-semibold text-blue-600 mt-3 tracking-normal">S.Tr.Kom</span>
+                        </h1>
+                        
+                        <p class="reveal delay-200 text-lg md:text-xl text-slate-600 mb-8 max-w-2xl font-light leading-relaxed mx-auto md:mx-0" data-i18n="hero.description">
+                            Software Engineer, CTO, and Founder. I build digital products, lead technology teams, and foster innovation from concept to execution.
+                        </p>
+                        
+                        <div class="reveal delay-300 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+                            <a href="#experience" class="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-full font-medium hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
+                                <span data-i18n="hero.ctaPrimary">Explore My Journey</span> <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                            <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 border border-slate-200 rounded-full font-medium hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 flex items-center justify-center group">
+                                <span data-i18n="hero.ctaSecondary">Let's Connect</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="w-64 md:w-[400px] relative reveal delay-200">
+                        <div class="relative aspect-[4/5] rounded-3xl overflow-hidden border border-slate-200/60 shadow-2xl shadow-slate-200/50 group bg-slate-100">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                            
+                            <!-- REPLACE THIS IMAGE WITH YOUR PROFILE PHOTO -->
+                            <!-- Ideal size: 400x500 portrait -->
+                            <img 
+                                src="https://raw.githubusercontent.com/kojolah/aqil/refs/heads/main/Aqil-Rahman.PNG" 
+                                alt="Aqil Rahman Profile" 
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                loading="eager"
+                            />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-slate-50 border-y border-slate-200/60">
+            <div class="max-w-6xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="pillars-container">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 md:py-32 scroll-mt-20">
+            <div class="max-w-6xl mx-auto px-6 md:px-12">
+                <div class="reveal mb-12 md:mb-16">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="text-sm font-semibold tracking-widest text-blue-600 uppercase">01 / <span data-i18n="nav.about">ABOUT</span></span>
+                        <div class="h-px w-12 bg-blue-600/30"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight" data-i18n="about.title">More Than a Developer</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div class="reveal delay-100 prose prose-lg text-slate-600 max-w-none leading-relaxed" id="about-content">
+                        <!-- Injected by JS -->
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4" id="about-highlights">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-24 md:py-32 bg-slate-50 scroll-mt-20 border-y border-slate-200/60">
+            <div class="max-w-6xl mx-auto px-6 md:px-12">
+                <div class="reveal mb-12 md:mb-16">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="text-sm font-semibold tracking-widest text-blue-600 uppercase">02 / <span data-i18n="nav.experience">EXPERIENCE</span></span>
+                        <div class="h-px w-12 bg-blue-600/30"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight" data-i18n="experience.title">Professional Experience</h2>
+                </div>
+                
+                <div class="relative border-l border-slate-200 ml-4 md:ml-6 space-y-12 pb-4" id="experience-container">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="technology" class="py-24 md:py-32 scroll-mt-20">
+            <div class="max-w-6xl mx-auto px-6 md:px-12">
+                <div class="reveal mb-12 md:mb-16">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="text-sm font-semibold tracking-widest text-blue-600 uppercase">03 / <span data-i18n="nav.technology">TECHNOLOGY</span></span>
+                        <div class="h-px w-12 bg-blue-600/30"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight" data-i18n="technology.title">Technology Stack & Skills</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12" id="skills-container">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="py-24 md:py-32 bg-slate-900 text-white scroll-mt-20">
+            <div class="max-w-6xl mx-auto px-6 md:px-12">
+                <div class="reveal mb-12 md:mb-16">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="text-sm font-semibold tracking-widest text-blue-400 uppercase">04 / <span data-i18n="nav.achievements">ACHIEVEMENTS</span></span>
+                        <div class="h-px w-12 bg-blue-500/30"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight" data-i18n="achievements.title">Recognition & Achievements</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="achievements-container">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="speaking" class="py-24 md:py-32 scroll-mt-20">
+            <div class="max-w-6xl mx-auto px-6 md:px-12">
+                <div class="reveal mb-12">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="text-sm font-semibold tracking-widest text-blue-600 uppercase">05 / <span data-i18n="nav.speaking">SPEAKING</span></span>
+                        <div class="h-px w-12 bg-blue-600/30"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-2" data-i18n="speaking.title">Sharing Knowledge</h2>
+                    <p class="text-slate-500 text-lg flex items-center gap-2">
+                        <i data-lucide="mic" class="w-5 h-5"></i> <span data-i18n="speaking.subtitle">Narasumber & Speaker</span>
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-2" id="speaking-container">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership" class="py-24 md:py-32 bg-slate-50 border-t border-slate-200/60 scroll-mt-20">
+            <div class="max-w-6xl mx-auto px-6 md:px-12">
+                <div class="reveal mb-12 md:mb-16">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="text-sm font-semibold tracking-widest text-blue-600 uppercase">06 / <span data-i18n="nav.leadership">LEADERSHIP</span></span>
+                        <div class="h-px w-12 bg-blue-600/30"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight" data-i18n="leadership.title">Leadership & Community</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="leadership-container">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-24 md:py-32 scroll-mt-20">
+            <div class="max-w-6xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    
+                    <!-- Education -->
+                    <div>
+                        <div class="reveal mb-12">
+                            <div class="flex items-center gap-4 mb-3">
+                                <span class="text-sm font-semibold tracking-widest text-blue-600 uppercase">07 / <span data-i18n="nav.education">EDUCATION</span></span>
+                                <div class="h-px w-12 bg-blue-600/30"></div>
+                            </div>
+                            <h2 class="text-3xl font-bold text-slate-900 tracking-tight" data-i18n="education.title">Academic Journey</h2>
+                        </div>
+                        <div class="relative border-l border-slate-200 ml-4 md:ml-6 space-y-10" id="education-container">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div>
+                        <div class="reveal mb-12">
+                            <div class="flex items-center gap-4 mb-3">
+                                <span class="text-sm font-semibold tracking-widest text-blue-600 uppercase">08 / <span data-i18n="nav.certifications">CERTIFICATIONS</span></span>
+                                <div class="h-px w-12 bg-blue-600/30"></div>
+                            </div>
+                            <h2 class="text-3xl font-bold text-slate-900 tracking-tight" data-i18n="certs.title">Professional Certifications</h2>
+                        </div>
+                        <div class="space-y-4" id="certs-container">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 md:py-32 bg-slate-50 border-t border-slate-200/60 scroll-mt-20">
+            <div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
+                <div class="reveal">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6" id="contact-title">
+                        <!-- Injected by JS -->
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-12 max-w-2xl mx-auto" data-i18n="contact.desc">
+                        Terbuka untuk kolaborasi di bidang teknologi, digital innovation, product development, entrepreneurship, dan knowledge sharing.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+                    <a href="mailto:aqilrahman@kojolah.com" class="reveal delay-100 flex flex-col items-center p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 hover:text-blue-600 transition-all group">
+                        <i data-lucide="mail" class="w-8 h-8 text-slate-400 group-hover:text-blue-600 mb-4 transition-colors"></i>
+                        <span class="font-medium text-slate-900 group-hover:text-blue-600 transition-colors text-sm break-all">aqilrahman@kojolah.com</span>
+                    </a>
+                    <a href="tel:+6283180119574" class="reveal delay-200 flex flex-col items-center p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 hover:text-blue-600 transition-all group">
+                        <i data-lucide="phone" class="w-8 h-8 text-slate-400 group-hover:text-blue-600 mb-4 transition-colors"></i>
+                        <span class="font-medium text-slate-900 group-hover:text-blue-600 transition-colors text-sm">+62 831 8011 9574</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aqiill" target="_blank" rel="noopener noreferrer" class="reveal delay-300 flex flex-col items-center p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 hover:text-blue-600 transition-all group">
+                        <i data-lucide="linkedin" class="w-8 h-8 text-slate-400 group-hover:text-blue-600 mb-4 transition-colors"></i>
+                        <span class="font-medium text-slate-900 group-hover:text-blue-600 transition-colors text-sm">linkedin.com/in/aqiill</span>
+                    </a>
+                </div>
+
+                <div class="reveal delay-400 text-left bg-slate-900 text-white p-8 md:p-10 rounded-3xl flex flex-col md:flex-row gap-8 items-center justify-between shadow-xl shadow-slate-900/10">
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-slate-800 rounded-xl shrink-0">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-3" data-i18n="contact.location">Locations</h4>
+                            <div class="space-y-2">
+                                <p class="text-slate-300 text-sm flex items-start gap-2">
+                                    <span class="block w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 shrink-0"></span>
+                                    Jl Imam Bonjol No 3 Padangdata Tanahmati, Kota Payakumbuh
+                                </p>
+                                <p class="text-slate-300 text-sm flex items-start gap-2">
+                                    <span class="block w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 shrink-0"></span>
+                                    Jl Pesantren Perum Permadani No 7, Cigadung, Kota Bandung
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="mailto:aqilrahman@kojolah.com" class="w-full md:w-auto px-8 py-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-500 hover:-translate-y-1 transition-all text-center whitespace-nowrap shadow-lg shadow-blue-600/30">
+                        <span data-i18n="contact.btn">Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="font-bold text-slate-900 text-lg tracking-tight">AQIL RAHMAN</p>
+                <p class="text-sm text-slate-500 mt-1" data-i18n="hero.description_short">Software Engineer • CTO • Founder</p>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <a href="https://www.linkedin.com/in/aqiill" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors">LinkedIn</a>
+                <a href="mailto:aqilrahman@kojolah.com" class="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors">Email</a>
+                <a href="#" class="text-sm font-medium text-slate-400 hover:text-slate-900 transition-colors ml-2 md:ml-4 flex items-center gap-1 group">
+                    <span data-i18n="footer.totop">Back to top</span> <i data-lucide="arrow-up" class="w-3 h-3 group-hover:-translate-y-0.5 transition-transform"></i>
+                </a>
+            </div>
+            
+            <div class="text-sm text-slate-400 text-center md:text-right" id="footer-copy">
+                <!-- Injected by JS -->
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. DATA AND TRANSLATION DICTIONARY (Strictly from CV) ---
+        const cvData = {
+            id: {
+                nav: {
+                    about: "About", experience: "Experience", technology: "Technology", achievements: "Achievements", speaking: "Speaking", leadership: "Leadership", education: "Education", certifications: "Certifications", contact: "Contact", cta: "Let's Connect"
+                },
+                hero: {
+                    badge: "TECHNOLOGY • INNOVATION • LEADERSHIP",
+                    greeting: "Hello, I'm",
+                    description: "Software Engineer, CTO, and Founder. Merancang produk digital, memimpin tim teknologi, dan mendorong inovasi dari konsep hingga eksekusi.",
+                    description_short: "Software Engineer • CTO • Founder",
+                    ctaPrimary: "Explore My Journey",
+                    ctaSecondary: "Let's Connect"
+                },
+                pillars: [
+                    { title: "BUILD", subtitle: "Software Development & CTO", icon: "code", desc: "Berpengalaman dalam pengembangan software dan kepemimpinan teknis." },
+                    { title: "LEAD", subtitle: "Leadership & Organization", icon: "users", desc: "Aktif memimpin organisasi, manajemen proyek, dan community building." },
+                    { title: "INNOVATE", subtitle: "Founder & Entrepreneurship", icon: "briefcase", desc: "Mengeksekusi ide menjadi produk digital sebagai founder startup." }
+                ],
+                about: {
+                    title: "More Than a Developer",
+                    content: `
+                        <p class="font-medium text-slate-900 text-xl mb-6 leading-relaxed">
+                            Saya merupakan lulusan Teknik Informatika dari Politeknik Negeri Bandung (Politeknik Institut Teknologi Bandung) dan telah aktif di dunia IT sejak tahun 2017 hingga sekarang.
+                        </p>
+                        <p class="mb-4">
+                            Agustus 2026, saya melanjutkan studi pada program Magister Teknik Informatika di STEI Institut Teknologi Bandung (ITB).
+                        </p>
+                        <p>
+                            Perjalanan akademik dan profesional ini semakin memperkuat kemampuan saya dalam pemrograman, manajemen proyek, serta troubleshooting.
+                        </p>
+                    `,
+                    highlights: [
+                        { label: "Experience in IT", value: "Sejak 2017" },
+                        { label: "Technology leadership", value: "Founder & CTO" },
+                        { label: "Institut Teknologi Bandung", value: "S2 Informatika" },
+                        { label: "Tech & entrepreneurship", value: "Digital Innovation" }
+                    ]
+                },
+                experience: {
+                    title: "Professional Experience",
+                    list: [
+                        { role: "CTO", period: "Nov 2021 — Agt 2026", company: "PT Putri Hijabfluencer Indonesia", location: "Lampung", desc: "Bertanggung jawab sebagai CTO untuk menyelenggarakan polling pemilihan Putri Hijabfluencer Indonesia secara daring." },
+                        { role: "Co-Founder & CTO", period: "Jun 2021 — Sekarang", company: "CV Fun Sport Indonesia", location: "Payakumbuh", desc: "Bertanggung jawab sebagai Co-Founder dan CTO terkait development dan maintenance aplikasi Fun Sport Indonesia." },
+                        { role: "Founder & CEO", period: "Okt 2020 — Sekarang", company: "CV Kojolah Sandbox", location: "Payakumbuh", desc: "Sebagai Founder dan CEO startup bertugas untuk merancang serta mengeksekusi ide menjadi sebuah produk digital sesuai keinginan klien." },
+                        { role: "Chatbot Developer", period: "Okt 2018 — Mar 2019", company: "PT Botika Teknologi Indonesia", location: "Yogyakarta", desc: "Bertanggung jawab sebagai Chatbot Developer untuk mengerjakan task ChatBot Assistant." }
+                    ]
+                },
+                technology: {
+                    title: "Technology Stack & Skills",
+                    categories: [
+                        { name: "Development", icon: "code-2", skills: ["Laravel", "VueJS", "ReactJS", "MySQL", "MongoDB", "CodeIgniter", "Bootstrap", "Oracle"] },
+                        { name: "Software", icon: "monitor", skills: ["Microsoft Office", "Photoshop", "CorelDraw", "Adobe Premiere"] },
+                        { name: "Professional Skills", icon: "mic", skills: ["Public Speaking", "Kerjasama Tim"] }
+                    ]
+                },
+                achievements: {
+                    title: "Recognition & Achievements",
+                    list: [
+                        { title: "Juara I Pemuda Pelopor", subtitle: "Bidang Ekonomi Digital — Sumatera Barat", year: "2025" },
+                        { title: "Juara I Inovasi dan Teknologi Digital Olahraga Masyarakat", subtitle: "Kemenpora RI", year: "2022" },
+                        { title: "Uda Duta Wisata", subtitle: "Kota Payakumbuh", year: "2022" },
+                        { title: "Juara I Pemuda Berprestasi", subtitle: "Bidang IPTEK — Provinsi Sumatera Barat", year: "2022" }
+                    ]
+                },
+                speaking: {
+                    title: "Sharing Knowledge",
+                    subtitle: "Narasumber & Speaker",
+                    list: [
+                        { event: "Pelatihan Digitalisasi UMKM Se-Kota Payakumbuh", organizer: "Dinas Perindustrian dan Perdagangan Sumatera Barat", year: "2025" },
+                        { event: "Pelatihan Kewirausahaan Pemuda Se-Kota Payakumbuh", organizer: "Dinas Pariwisata Pemuda dan Olahraga Kota Payakumbuh", year: "2025" },
+                        { event: "Pelatihan Digital Marketing Persiapan Praktek Kerja Lapangan", organizer: "SMK Negeri 4 Payakumbuh", year: "2025" },
+                        { event: "Pelatihan Konten Kreator promosi SPMB", organizer: "Politeknik Pertanian Payakumbuh", year: "2025" },
+                        { event: "Digitalisasi Nagari/Desa — Pemasaran Produk Bumnag Digital", organizer: "Kominfo Sumatera Barat (Kab. Lima Puluh Kota & Solok)", year: "2024 — Skrg" },
+                        { event: "Pelatihan Leadership Calon Anggota OSIM", organizer: "MAN 1 Payakumbuh", year: "2024" },
+                        { event: "Personal Branding Duta Era Digital 4.0", organizer: "Putri Hijabfluencer Indonesia", year: "2021 — Skrg" },
+                        { event: "Latihan Dasar Kepemimpinan Mahasiswa", organizer: "BEM KEMA Polban - Kompetisi Bisnis Mahasiswa", year: "2020 — 2024" },
+                        { event: "Pelatihan Dasar Pemrograman", organizer: "Sekolah Tinggi Teknologi Payakumbuh", year: "2020" },
+                        { event: "Pelatihan Kaderisasi Duta Wisata", organizer: "Ikatan Uda dan Uni Duta Wisata Kota Payakumbuh", year: "2019 — Skrg" }
+                    ]
+                },
+                leadership: {
+                    title: "Leadership & Community",
+                    list: [
+                        { role: "Ketua Koperasi Merah Putih Padangdata Tanahmati", period: "Jun 2025 — Jun 2026" },
+                        { role: "Ketua Ikatan Uda Uni Duta Wisata Kota Payakumbuh", period: "Mar 2024 — Des 2025" },
+                        { role: "Ketua Unit Kewirausahaan Himakom Politeknik Negeri Bandung", period: "Okt 2022 — Okt 2023" },
+                        { role: "Presidium II BEM Politeknik Negeri Bandung", period: "Des 2020 — Des 2021" },
+                        { role: "Ketua KPU Himakom Politeknik Negeri Bandung", period: "Nov 2020 — Nov 2021" },
+                        { role: "Ketua OSIS SMK Negeri 4 Payakumbuh", period: "Jan 2019 — Des 2019" }
+                    ]
+                },
+                education: {
+                    title: "Academic Journey",
+                    list: [
+                        { institution: "Institut Teknologi Bandung (ITB)", degree: "S2 — Teknik Informatika", period: "Agustus 2026 — Sekarang" },
+                        { institution: "Politeknik Negeri Bandung (Politeknik ITB)", degree: "S1 — Teknik Informatika", period: "Oktober 2020 — Juli 2024" },
+                        { institution: "SMK Negeri 4 Payakumbuh", degree: "Rekayasa Perangkat Lunak", period: "Juni 2017 — Mei 2020" }
+                    ]
+                },
+                certs: {
+                    title: "Professional Certifications",
+                    list: [
+                        { title: "Business Management Specialist", issuer: "Badan Nasional Sertifikasi Profesi", year: "2025" },
+                        { title: "Junior Web Developer (Perpanjangan)", issuer: "Badan Nasional Sertifikasi Profesi", year: "2024–2027" },
+                        { title: "Junior Web Developer", issuer: "Badan Nasional Sertifikasi Profesi", year: "2021–2024" }
+                    ]
+                },
+                contact: {
+                    titleHTML: `Let's Build Something <span class="text-blue-600">Meaningful</span>`,
+                    desc: "Terbuka untuk kolaborasi di bidang teknologi, digital innovation, product development, entrepreneurship, dan knowledge sharing.",
+                    location: "Locations",
+                    btn: "Get In Touch"
+                },
+                footer: { totop: "Back to top", copy: "&copy; 2026 Aqil Rahman. All rights reserved." }
+            },
+            
+            en: {
+                nav: {
+                    about: "About", experience: "Experience", technology: "Technology", achievements: "Achievements", speaking: "Speaking", leadership: "Leadership", education: "Education", certifications: "Certifications", contact: "Contact", cta: "Let's Connect"
+                },
+                hero: {
+                    badge: "TECHNOLOGY • INNOVATION • LEADERSHIP",
+                    greeting: "Hello, I'm",
+                    description: "Software Engineer, CTO, and Founder. I design digital products, lead technology teams, and foster innovation from concept to execution.",
+                    description_short: "Software Engineer • CTO • Founder",
+                    ctaPrimary: "Explore My Journey",
+                    ctaSecondary: "Let's Connect"
+                },
+                pillars: [
+                    { title: "BUILD", subtitle: "Software Development & CTO", icon: "code", desc: "Experienced in software development and technical leadership." },
+                    { title: "LEAD", subtitle: "Leadership & Organization", icon: "users", desc: "Active in leading organizations, project management, and community building." },
+                    { title: "INNOVATE", subtitle: "Founder & Entrepreneurship", icon: "briefcase", desc: "Executing ideas into digital products as a startup founder." }
+                ],
+                about: {
+                    title: "More Than a Developer",
+                    content: `
+                        <p class="font-medium text-slate-900 text-xl mb-6 leading-relaxed">
+                            I am an Informatics Engineering graduate from Politeknik Negeri Bandung and have been active in the IT field since 2017.
+                        </p>
+                        <p class="mb-4">
+                            In August 2026, I continued my studies in the Master of Informatics Engineering program at STEI Institut Teknologi Bandung (ITB).
+                        </p>
+                        <p>
+                            This academic and professional journey has further strengthened my skills in programming, project management, and troubleshooting.
+                        </p>
+                    `,
+                    highlights: [
+                        { label: "Experience in IT", value: "Since 2017" },
+                        { label: "Technology leadership", value: "Founder & CTO" },
+                        { label: "Institut Teknologi Bandung", value: "M.Sc Informatics" },
+                        { label: "Tech & entrepreneurship", value: "Digital Innovation" }
+                    ]
+                },
+                experience: {
+                    title: "Professional Experience",
+                    list: [
+                        { role: "CTO", period: "Nov 2021 — Present", company: "PT Putri Hijabfluencer Indonesia", location: "Lampung", desc: "Responsible as CTO for organizing the online polling for the selection of Putri Hijabfluencer Indonesia." },
+                        { role: "Co-Founder & CTO", period: "Jun 2021 — Present", company: "CV Fun Sport Indonesia", location: "Payakumbuh", desc: "Responsible as Co-Founder and CTO regarding the development and maintenance of the Fun Sport Indonesia application." },
+                        { role: "Founder & CEO", period: "Oct 2020 — Present", company: "CV Kojolah Sandbox", location: "Payakumbuh", desc: "As Founder and CEO of the startup, tasked with designing and executing ideas into digital products according to client wishes." },
+                        { role: "Chatbot Developer", period: "Oct 2018 — Mar 2019", company: "PT Botika Teknologi Indonesia", location: "Yogyakarta", desc: "Responsible as a Chatbot Developer for executing ChatBot Assistant tasks." }
+                    ]
+                },
+                technology: {
+                    title: "Technology Stack & Skills",
+                    categories: [
+                        { name: "Development", icon: "code-2", skills: ["Laravel", "VueJS", "ReactJS", "MySQL", "MongoDB", "CodeIgniter", "Bootstrap", "Oracle"] },
+                        { name: "Software", icon: "monitor", skills: ["Microsoft Office", "Photoshop", "CorelDraw", "Adobe Premiere"] },
+                        { name: "Professional Skills", icon: "mic", skills: ["Public Speaking", "Teamwork"] }
+                    ]
+                },
+                achievements: {
+                    title: "Recognition & Achievements",
+                    list: [
+                        { title: "1st Place Outstanding Youth Pioneer", subtitle: "Digital Economy Sector — West Sumatra", year: "2025" },
+                        { title: "1st Place Digital Tech Innovation in Community Sports", subtitle: "Ministry of Youth and Sports RI", year: "2022" },
+                        { title: "Tourism Ambassador (Uda Duta Wisata)", subtitle: "Payakumbuh City", year: "2022" },
+                        { title: "1st Place Outstanding Youth", subtitle: "Science and Technology Sector — West Sumatra", year: "2022" }
+                    ]
+                },
+                speaking: {
+                    title: "Sharing Knowledge",
+                    subtitle: "Speaker & Resource Person",
+                    list: [
+                        { event: "MSME Digitalization Training Across Payakumbuh City", organizer: "Department of Industry and Trade, West Sumatra", year: "2025" },
+                        { event: "Youth Entrepreneurship Training Across Payakumbuh City", organizer: "Department of Tourism, Youth and Sports, Payakumbuh City", year: "2025" },
+                        { event: "Digital Marketing Training for Vocational Student Internships", organizer: "SMK Negeri 4 Payakumbuh", year: "2025" },
+                        { event: "Content Creator Training for SPMB Promotion", organizer: "Politeknik Pertanian Payakumbuh", year: "2025" },
+                        { event: "Village Digitalization — Digital Bumnag Product Marketing", organizer: "Ministry of Communication and Info, West Sumatra", year: "2024 — Pres." },
+                        { event: "Leadership Training for Student Council Candidates", organizer: "MAN 1 Payakumbuh", year: "2024" },
+                        { event: "Personal Branding Era Digital 4.0 Ambassador", organizer: "Putri Hijabfluencer Indonesia", year: "2021 — Pres." },
+                        { event: "Basic Student Leadership Training", organizer: "BEM KEMA Polban - Student Business Competition", year: "2020 — 2024" },
+                        { event: "Basic Programming Training", organizer: "Sekolah Tinggi Teknologi Payakumbuh", year: "2020" },
+                        { event: "Tourism Ambassador Regeneration Training", organizer: "Uda & Uni Tourism Ambassador Association, Payakumbuh", year: "2019 — Pres." }
+                    ]
+                },
+                leadership: {
+                    title: "Leadership & Community",
+                    list: [
+                        { role: "Chairman, Merah Putih Cooperative Padangdata Tanahmati", period: "Jun 2025 — Jun 2026" },
+                        { role: "Chairman, Uda Uni Tourism Ambassador Association Payakumbuh", period: "Mar 2024 — Dec 2025" },
+                        { role: "Head of Entrepreneurship Unit, Himakom Politeknik Negeri Bandung", period: "Oct 2022 — Oct 2023" },
+                        { role: "Presidium II, Student Executive Board Politeknik Negeri Bandung", period: "Dec 2020 — Dec 2021" },
+                        { role: "Head of Election Commission, Himakom Politeknik Negeri Bandung", period: "Nov 2020 — Nov 2021" },
+                        { role: "Student Council President, SMK Negeri 4 Payakumbuh", period: "Jan 2019 — Dec 2019" }
+                    ]
+                },
+                education: {
+                    title: "Academic Journey",
+                    list: [
+                        { institution: "Institut Teknologi Bandung (ITB)", degree: "M.Sc — Informatics Engineering", period: "August 2026 — Present" },
+                        { institution: "Politeknik Negeri Bandung (Politeknik ITB)", degree: "B.Sc — Informatics Engineering", period: "October 2020 — July 2024" },
+                        { institution: "SMK Negeri 4 Payakumbuh", degree: "Software Engineering", period: "June 2017 — May 2020" }
+                    ]
+                },
+                certs: {
+                    title: "Professional Certifications",
+                    list: [
+                        { title: "Business Management Specialist", issuer: "National Professional Certification Agency", year: "2025" },
+                        { title: "Junior Web Developer (Extension)", issuer: "National Professional Certification Agency", year: "2024–2027" },
+                        { title: "Junior Web Developer", issuer: "National Professional Certification Agency", year: "2021–2024" }
+                    ]
+                },
+                contact: {
+                    titleHTML: `Let's Build Something <span class="text-blue-600">Meaningful</span>`,
+                    desc: "Open for collaboration in technology, digital innovation, product development, entrepreneurship, and knowledge sharing.",
+                    location: "Locations",
+                    btn: "Get In Touch"
+                },
+                footer: { totop: "Back to top", copy: "&copy; 2026 Aqil Rahman. All rights reserved." }
+            }
+        };
+
+        let currentLang = 'id';
+
+        // --- 2. RENDER FUNCTIONS ---
+        function renderPillars(langData) {
+            const container = document.getElementById('pillars-container');
+            container.innerHTML = langData.pillars.map((item, i) => `
+                <div class="reveal delay-${i}00 p-8 rounded-3xl bg-white border border-slate-200/60 shadow-sm hover:shadow-md transition-shadow group">
+                    <i data-lucide="${item.icon}" class="w-8 h-8 mb-4 text-blue-600 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-slate-900 mb-1">${item.title}</h3>
+                    <p class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4">${item.subtitle}</p>
+                    <p class="text-slate-600 text-sm">${item.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        function renderAbout(langData) {
+            document.getElementById('about-content').innerHTML = langData.about.content;
+            const hlContainer = document.getElementById('about-highlights');
+            hlContainer.innerHTML = langData.about.highlights.map((h, i) => `
+                <div class="reveal delay-${(i%2+1)}00 p-6 rounded-2xl bg-slate-50 border border-slate-100 h-full flex flex-col justify-center transition-colors hover:border-blue-200 hover:bg-blue-50/50">
+                    <span class="block text-slate-900 font-bold text-lg md:text-xl mb-1">${h.value}</span>
+                    <span class="block text-sm text-slate-500">${h.label}</span>
+                </div>
+            `).join('');
+        }
+
+        function renderExperience(langData) {
+            const container = document.getElementById('experience-container');
+            container.innerHTML = langData.experience.list.map((exp, i) => `
+                <div class="reveal delay-${i}00 relative pl-8 md:pl-12 group">
+                    <div class="absolute w-4 h-4 bg-white border-2 border-${i===0?'blue-600':'slate-300'} rounded-full -left-[9px] top-1.5 transition-colors group-hover:bg-blue-400 group-hover:border-blue-400"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">${exp.role}</h3>
+                        <span class="text-sm font-medium ${i===0?'text-blue-600 bg-blue-50':'text-slate-500 bg-slate-100'} px-3 py-1 rounded-full w-fit mt-2 md:mt-0 border border-${i===0?'blue-100':'slate-200'}">${exp.period}</span>
+                    </div>
+                    <div class="text-base font-semibold text-slate-700 mb-3 flex items-center gap-2">
+                        ${exp.company} <span class="text-slate-300">•</span> <span class="text-sm font-normal text-slate-500">${exp.location}</span>
+                    </div>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">${exp.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        function renderTechnology(langData) {
+            const container = document.getElementById('skills-container');
+            container.innerHTML = langData.technology.categories.map((cat, i) => `
+                <div class="reveal delay-${(i+1)}00">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="${cat.icon}" class="w-5 h-5 text-blue-600"></i>
+                        <h3 class="text-lg font-bold text-slate-900">${cat.name}</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        ${cat.skills.map(skill => `<span class="px-4 py-2 bg-slate-50 border border-slate-200 text-slate-700 text-sm font-medium rounded-full hover:border-blue-300 hover:bg-blue-50 transition-colors">${skill}</span>`).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderAchievements(langData) {
+            const container = document.getElementById('achievements-container');
+            const icons = ['award', 'medal', 'star', 'trophy'];
+            container.innerHTML = langData.achievements.list.map((item, i) => `
+                <div class="reveal delay-${i}00 p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-blue-900/20 h-full flex flex-col justify-between group">
+                    <div>
+                        <i data-lucide="${icons[i]}" class="w-8 h-8 text-blue-400 mb-6 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-xl font-bold mb-2">${item.title}</h3>
+                        <p class="text-slate-400 text-sm">${item.subtitle}</p>
+                    </div>
+                    <div class="mt-8 text-sm font-mono text-blue-300 font-semibold tracking-wide">${item.year}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderSpeaking(langData) {
+            const container = document.getElementById('speaking-container');
+            container.innerHTML = langData.speaking.list.map((item, i) => `
+                <div class="reveal delay-${(i%2)}00 flex flex-col sm:flex-row sm:items-start justify-between py-5 border-b border-slate-100 group hover:border-blue-200 transition-colors">
+                    <div class="mb-2 sm:mb-0 sm:pr-4">
+                        <h4 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">${item.event}</h4>
+                        <p class="text-sm text-slate-500 mt-1">${item.organizer}</p>
+                    </div>
+                    <span class="text-xs font-mono font-medium text-slate-500 whitespace-nowrap bg-slate-50 px-2.5 py-1 rounded-md border border-slate-200 group-hover:border-blue-200 group-hover:text-blue-600 transition-colors">${item.year}</span>
+                </div>
+            `).join('');
+        }
+
+        function renderLeadership(langData) {
+            const container = document.getElementById('leadership-container');
+            container.innerHTML = langData.leadership.list.map((item, i) => `
+                <div class="reveal delay-${(i%3)}00 p-6 rounded-2xl border border-slate-200 hover:shadow-md hover:border-slate-300 transition-all bg-white h-full flex flex-col justify-between hover:-translate-y-1">
+                    <h4 class="font-bold text-slate-900 mb-4 leading-snug">${item.role}</h4>
+                    <span class="text-sm font-medium text-${i<3?'blue-600 bg-blue-50':'slate-500 bg-slate-50 border border-slate-100'} px-3 py-1.5 rounded-full w-fit">${item.period}</span>
+                </div>
+            `).join('');
+        }
+
+        function renderEducationAndCerts(langData) {
+            const eduContainer = document.getElementById('education-container');
+            eduContainer.innerHTML = langData.education.list.map((edu, i) => `
+                <div class="reveal delay-${i}00 relative pl-8 md:pl-10">
+                    <div class="absolute w-10 h-10 bg-white border border-slate-200 rounded-full -left-[21px] -top-2 flex items-center justify-center text-slate-400">
+                        <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">${edu.institution}</h3>
+                    <p class="text-${i===0?'blue-600':'slate-700'} font-medium my-1">${edu.degree}</p>
+                    <p class="text-sm text-slate-500">${edu.period}</p>
+                </div>
+            `).join('');
+
+            const certContainer = document.getElementById('certs-container');
+            certContainer.innerHTML = langData.certs.list.map((cert, i) => `
+                <div class="reveal delay-${i}00 p-6 rounded-2xl bg-white border border-slate-200 flex items-start gap-4 hover:border-blue-300 transition-colors group">
+                    <div class="p-3 bg-${i===0?'blue-50 text-blue-600':'slate-50 text-slate-500'} rounded-xl shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">${cert.title}</h4>
+                        <p class="text-sm text-slate-600 mt-1">${cert.issuer}</p>
+                        <p class="text-xs font-mono text-slate-400 mt-3 font-medium">${cert.year}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- 3. TRANSLATION ENGINE ---
+        function applyStaticTranslations(langData) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const keys = key.split('.');
+                let value = langData;
+                keys.forEach(k => { value = value ? value[k] : null; });
+                
+                if (value) {
+                    el.textContent = value;
+                }
+            });
+
+            // Handlers for HTML content in static areas
+            document.getElementById('contact-title').innerHTML = langData.contact.titleHTML;
+            document.getElementById('footer-copy').innerHTML = langData.footer.copy;
+        }
+
+        window.setLanguage = function(lang) {
+            currentLang = lang;
+            const langData = cvData[lang];
+            
+            // Re-render UI components with new language
+            renderPillars(langData);
+            renderAbout(langData);
+            renderExperience(langData);
+            renderTechnology(langData);
+            renderAchievements(langData);
+            renderSpeaking(langData);
+            renderLeadership(langData);
+            renderEducationAndCerts(langData);
+            applyStaticTranslations(langData);
+
+            // Re-initialize icons since DOM was replaced
+            lucide.createIcons();
+
+            // Toggle Button active states
+            const activeClass = ['bg-white', 'shadow-sm', 'text-slate-900'];
+            const inactiveClass = ['text-slate-500', 'hover:text-slate-900'];
+            
+            const btnId = document.getElementById('btn-lang-id');
+            const btnEn = document.getElementById('btn-lang-en');
+            const btnIdMob = document.getElementById('btn-lang-id-mob');
+            const btnEnMob = document.getElementById('btn-lang-en-mob');
+
+            if(lang === 'id') {
+                btnId.classList.add(...activeClass); btnId.classList.remove(...inactiveClass);
+                btnEn.classList.add(...inactiveClass); btnEn.classList.remove(...activeClass);
+                btnIdMob.classList.add(...activeClass); btnIdMob.classList.remove(...inactiveClass);
+                btnEnMob.classList.add(...inactiveClass); btnEnMob.classList.remove(...activeClass);
+            } else {
+                btnEn.classList.add(...activeClass); btnEn.classList.remove(...inactiveClass);
+                btnId.classList.add(...inactiveClass); btnId.classList.remove(...activeClass);
+                btnEnMob.classList.add(...activeClass); btnEnMob.classList.remove(...inactiveClass);
+                btnIdMob.classList.add(...inactiveClass); btnIdMob.classList.remove(...activeClass);
+            }
+
+            // Re-trigger scroll observer for newly injected nodes if they are in viewport
+            observeElements();
+        };
+
+        // --- 4. ANIMATION SYSTEM (Intersection Observer) ---
+        let revealObserver;
+        function observeElements() {
+            if(revealObserver) revealObserver.disconnect();
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -50px 0px',
+                threshold: 0.1
+            };
+
+            revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal:not(.active)');
+            revealElements.forEach(el => revealObserver.observe(el));
+        }
+
+
+        // --- 5. INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize with default language (ID)
+            setLanguage('id');
+
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('glass-nav');
+                    navbar.classList.remove('bg-transparent', 'py-6');
+                    navbar.classList.add('py-4');
+                } else {
+                    navbar.classList.remove('glass-nav', 'py-4');
+                    navbar.classList.add('bg-transparent', 'py-6');
+                }
+            });
+
+            // Mobile Menu Logic
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = mobileMenuBtn.querySelector('i');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            let isMenuOpen = false;
+
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.setAttribute('data-lucide', 'x');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.setAttribute('data-lucide', 'menu');
+                }
+                lucide.createIcons();
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if(isMenuOpen) toggleMenu();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
